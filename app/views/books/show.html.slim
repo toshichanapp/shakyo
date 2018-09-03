@@ -1,0 +1,6 @@
+h1
+  = @book.title
+ul
+  - @book.chapters.order(:id).each do |chapter|
+    li
+     = link_to chapter.title, book_chapter_path(@book, chapter)
